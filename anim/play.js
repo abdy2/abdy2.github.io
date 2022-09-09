@@ -3,6 +3,6 @@ var animation = bodymovin.loadAnimation({
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path:'https://assets2.lottiefiles.com/packages/lf20_1vR8ovy7Au.json'
+    path:'https://assets5.lottiefiles.com/packages/lf20_17p4evft.json'
 })
 console.log('connected to play')
