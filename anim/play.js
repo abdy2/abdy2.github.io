@@ -3,6 +3,6 @@ var animation = bodymovin.loadAnimation({
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path:'data.json'
+    path:'L8cCgniyyY.json'
 })
 console.log('connected to play')
