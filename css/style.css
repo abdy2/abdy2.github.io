@@ -1,0 +1,102 @@
+:root {
+  --alice-blue: #769edb;
+  --lightalice: #afc3e1;
+  --biege: #efdcbd;
+  --lightbiege: #f0e8dc;
+  --carton: #f4c28c;
+}
+body {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.nav {
+  height: 50px;
+  box-shadow: 0.1em 0.1em 0.5em rgba(0, 0, 0, 0.3);
+}
+#preview {
+  border: 4px solid var(--carton);
+}
+.home {
+  overflow: auto;
+  position: absolute;
+  font-family: "Roboto", sans-serif;
+  margin-top: 1%;
+  margin-left: 10%;
+  color: var(--alice-blue);
+  font-size: 1rem;
+}
+.intro {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 3rem;
+  margin: 10px;
+  padding: 20px;
+  color: var(--biege);
+}
+.header {
+  background-color: var(--alice-blue);
+  height: 80vh;
+}
+.sec2 {
+  margin-top: 3%;
+}
+.sec1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header {
+  display: flex;
+  align-items: center;
+}
+.header > div {
+  flex: 1;
+}
+.gs {
+  border: 2px solid var(--biege);
+  padding: 15px;
+  border-radius: 6px;
+  font-family: "Ubuntu", sans-serif;
+  color: var(--biege);
+  margin-top: 10%;
+}
+.gs:hover {
+  color: var(--alice-blue);
+  background-color: var(--biege);
+  cursor: pointer;
+}
+
+.sec {
+  width: 90%;
+}
+.content {
+  display: flex;
+  justify-content: space-evenly;
+}
+.content > div {
+  background-color: var(--alice-blue);
+  margin: 5%;
+  padding: 3%;
+  color: var(--biege);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 9px;
+  width: 20%;
+}
+.title {
+  font-family: "Ubuntu", sans-serif;
+  color: var(--lightbiege);
+}
+.desc {
+  font-family: "Ubuntu", sans-serif;
+}
+.footer {
+  background-color: var(--carton);
+  height: 50px;
+  text-align: center;
+  padding: 10px 0;
+  color: #75491a;
+}
+.comp {
+  font-family: "Ubuntu", sans-serif;
+}
