@@ -10,14 +10,21 @@ const iframeComponent = document.getElementById("preview").contentWindow.documen
 var showupload = 'false';
 var lastid = '';
 
-
-    // speech recognistion
+try {
+      // speech recognistion
     const SpeechRecognition =  window.webkitSpeechRecognition;
     const recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     
     recognition.onstart = function() {
         console.log("You can speek now!");
     };
+}
+catch(err) {
+	console.log(err.message);
+ 
+}
+
+
 
 //all the possible words user can use to communicate with computer
 const possibleTypes = ["blog", "ecommerce","portfolio",];
