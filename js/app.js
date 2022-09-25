@@ -10,7 +10,6 @@ const iframeComponent = document.getElementById("preview").contentWindow.documen
 var showupload = 'false';
 var lastid = '';
 
-try {
       // speech recognistion
     const SpeechRecognition =  window.webkitSpeechRecognition;
     const recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -18,11 +17,7 @@ try {
     recognition.onstart = function() {
         console.log("You can speek now!");
     };
-}
-catch(err) {
-	console.log(err.message);
- 
-}
+
 
 
 
