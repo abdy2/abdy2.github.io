@@ -13,7 +13,7 @@ var lastid = '';
 
     // speech recognistion
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-    const recognition = new SpeechRecognition();
+    const recognition = new webkitSpeechRecognition();
     
     recognition.onstart = function() {
         console.log("You can speek now!");
