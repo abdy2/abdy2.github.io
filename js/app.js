@@ -10,16 +10,19 @@ const iframeComponent = document.getElementById("preview").contentWindow.documen
 var showupload = 'false';
 var lastid = '';
 
-      // speech recognistion
-    const SpeechRecognition =  window.webkitSpeechRecognition;
-    const recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+//check browser
+var it = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor) && !/OPR/.test(navigator.userAgent);
+let SpeechRecognition;
+let recognistion;
+if(it){
+    // speech recognistion
+     SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      recognition = new SpeechRecognition();
     
-    recognition.onstart = function() {
-        console.log("You can speek now!");
-    };
-
-
-
+     recognition.onstart = function() {
+         console.log("You can speek now!");
+     };
+  }
 
 //all the possible words user can use to communicate with computer
 const possibleTypes = ["blog", "ecommerce","portfolio",];
@@ -9491,6 +9494,7 @@ sendd.addEventListener('click', () => {
 	if(msg) lobby(msg);
   
 });
+if(it){
 recognition.onresult = function(e){
     const current = event.resultIndex;
     const transcript = event.results[current][0].transcript;
@@ -9498,11 +9502,17 @@ recognition.onresult = function(e){
     lobby(transcript.toLowerCase());
     render();
     
-}
+}}
+if(it){
 // adding eventlistner to voice
 mic.addEventListener('click', function() {
     recognition.start();
+})}else{
+  mic.addEventListener('click', function() {
+    alert('sorry voice assistance only work for chrome and edge');
 })
+  
+}
 
 function lobby(quiz) {
     if (quest == 'What type of website you want to make' ) {
